@@ -17,7 +17,14 @@ export function escapeBrackets(str: string) {
 export function copyToClipboard(template: string, title: string, url: string) {
   console.log("copyToClipboard", template, title, url);
 
-  const textToCopy = template.replace("${title}", title).replace("${url}", url);
+  const cliTitle = title
+    .replace(/\s-\sJIRA$/, "")
+    .replace(/ - [A-Za-z]+ - Redmine$/, "")
+    .replace(/ · GitLab$/, "");
+
+  const textToCopy = template
+    .replace("${title}", cliTitle)
+    .replace("${url}", url);
 
   const listener = (event: any) => {
     event.clipboardData.setData("text/plain", `${textToCopy}`);
