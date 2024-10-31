@@ -1,6 +1,6 @@
 {
   "name": "copy-title-and-url-as-markdown",
-  "version": "1.10.0",
+  "version": "2.0.0",
   "description": "Quickly copy the title & url of current tab as Markdown style (`[title](url)`)",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "build-storybook": "build-storybook",
     "zip": "bestzip dist.zip dist/*",
     "lint": "eslint --ext .ts,.tsx src/**",
-    "release": "run-s lint build && standard-version",
+    "release": "npm run lint && npm run build && standard-version",
     "release:dry-run": "standard-version --dry-run"
   },
   "repository": {
@@ -34,21 +34,21 @@
     "react-lightning-design-system": "5.2.5"
   },
   "devDependencies": {
-    "@crxjs/vite-plugin": "1.0.12",
-    "@cybozu/eslint-config": "17.0.2",
-    "@storybook/addon-essentials": "^6.5.9",
+    "@crxjs/vite-plugin": "1.0.14",
+    "@cybozu/eslint-config": "17.0.3",
+    "@storybook/addon-essentials": "6.5.16",
     "@storybook/builder-vite": "0.1.41",
-    "@storybook/react": "^6.5.9",
-    "@storybook/testing-library": "^0.0.13",
-    "@types/chrome": "0.0.193",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
-    "@vitejs/plugin-react": "^1.3.0",
-    "bestzip": "^2.2.1",
-    "eslint": "8.19.0",
-    "standard-version": "^9.5.0",
-    "typescript": "4.7.4",
-    "vite": "2.9.14",
-    "vitest": "0.18.1"
+    "@storybook/react": "6.5.16",
+    "@storybook/testing-library": "0.0.13",
+    "@types/chrome": "0.0.267",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "1.3.2",
+    "bestzip": "2.2.1",
+    "eslint": "8.35.0",
+    "standard-version": "9.5.0",
+    "typescript": "4.8.4",
+    "vite": "2.9.18",
+    "vitest": "0.23.4"
   }
 }
