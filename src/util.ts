@@ -19,8 +19,9 @@ export function copyToClipboard(template: string, title: string, url: string) {
 
   const cliTitle = title
     .replace(/\s-\sJIRA$/, "")
-    .replace(/ - [A-Za-z]+ - Redmine$/, "")
-    .replace(/ · GitLab$/, "");
+    .replace(/^.*: (.*) - [A-Za-z]+ - Redmine$/, "$1")
+    .replace(/ · GitLab$/, "")
+    .replace(/ - [a-z]+\.esa\.io/, "");
 
   const textToCopy = template
     .replace("${title}", cliTitle)
@@ -35,4 +36,5 @@ export function copyToClipboard(template: string, title: string, url: string) {
   document.removeEventListener("copy", listener);
 
   console.log("Successfully copied to clipboard: " + textToCopy);
+  return cliTitle;
 }
