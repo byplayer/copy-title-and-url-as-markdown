@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "default_locale": "en",
   "icons": {
     "128": "icon128.png"
@@ -41,5 +41,9 @@
     "clipboardWrite",
     "scripting",
     "storage"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
   ]
 }

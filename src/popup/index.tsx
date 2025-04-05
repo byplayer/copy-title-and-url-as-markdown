@@ -20,6 +20,7 @@ chrome.tabs.query(queryInfo, function (tabs) {
       escapeBrackets(url),
     );
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     ReactDOM.createRoot(document.getElementById("root")!).render(
       <React.StrictMode>
         <Popup title={replace_title} url={escapeBrackets(url)} />

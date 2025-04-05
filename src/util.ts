@@ -14,6 +14,10 @@ export function escapeBrackets(str: string) {
     .replace(/\]/g, escape);
 }
 
+export function buildTemplate(template: string, title: string, url: string) {
+  return template.replaceAll("${title}", title).replaceAll("${url}", url);
+}
+
 export function copyToClipboard(template: string, title: string, url: string) {
   console.log("copyToClipboard", template, title, url);
 
@@ -23,9 +27,7 @@ export function copyToClipboard(template: string, title: string, url: string) {
     .replace(/ · GitLab$/, "")
     .replace(/ - [a-z]+\.esa\.io/, "");
 
-  const textToCopy = template
-    .replace("${title}", cliTitle)
-    .replace("${url}", url);
+  const textToCopy = buildTemplate(template, cliTitle, url);
 
   const listener = (event: any) => {
     event.clipboardData.setData("text/plain", `${textToCopy}`);
