@@ -19,7 +19,7 @@ export function copyToClipboard(template: string, title: string, url: string) {
 
   const cliTitle = title
     .replace(/\s-\sJIRA$/, "")
-    .replace(/^.*: (.*) - [A-Za-z]+ - Redmine$/, "$1")
+    .replace(/^.*#([0-9]+): (.*) - [A-Za-z]+ - Redmine$/, "$1 $2")
     .replace(/ · GitLab$/, "")
     .replace(/ - [a-z]+\.esa\.io/, "");
 
