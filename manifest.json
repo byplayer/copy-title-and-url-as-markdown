@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
-  "version": "2.0.2",
+  "version": "2.0.2.1",
   "default_locale": "en",
   "icons": {
     "128": "icon128.png"
@@ -36,14 +36,6 @@
   "background": {
     "service_worker": "src/background.ts"
   },
-  "permissions": [
-    "activeTab",
-    "clipboardWrite",
-    "scripting",
-    "storage"
-  ],
-  "host_permissions": [
-    "https://*/*",
-    "http://*/*"
-  ]
+  "permissions": ["activeTab", "clipboardWrite", "scripting", "storage"],
+  "host_permissions": ["https://*/*", "http://*/*"]
 }

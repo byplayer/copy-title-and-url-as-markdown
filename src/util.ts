@@ -25,7 +25,8 @@ export function copyToClipboard(template: string, title: string, url: string) {
     .replace(/\s-\sJIRA$/, "")
     .replace(/^.*#([0-9]+): (.*) - [A-Za-z]+ - Redmine$/, "$1 $2")
     .replace(/ · GitLab$/, "")
-    .replace(/ - [a-z]+\.esa\.io/, "");
+    .replace(/ - [a-z]+\.esa\.io/, "")
+    .replace(/ - Confluence$/, "");
 
   const textToCopy = buildTemplate(template, cliTitle, url);
 
